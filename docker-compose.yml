@@ -9,14 +9,14 @@ services:
       - "80:80"
     restart: always
     depends_on:
-      - django_app
+      - django_notes
     networks:
       - notes-app-nw
 
   django_app:
     build:
       context: .
-    image: django_app
+    image: django_notes
     container_name: "django_cont"
     ports:
       - "8000:8000"
